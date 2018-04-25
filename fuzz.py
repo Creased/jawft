@@ -1,6 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+"""JAWFT - Just another web fuzzing tool."""
+
+#==========================================================#
+# [+] Title:   JAWFT                                       #
+# [+] Author:  Baptiste M. (Creased)                       #
+# [+] Website: bmoine.fr                                   #
+# [+] Email:   contact@bmoine.fr                           #
+# [+] Twitter: @Creased_                                   #
+#==========================================================#
+
+__version__ = '0.1-dev'
+
 import traceback
 import threading
 import argparse
@@ -173,7 +185,9 @@ def fuzz_user_agent(url, wordlist_path, threads_count):
 def parse_args():
     """Arguments parsing."""
     parser = argparse.ArgumentParser(
-        description='JAWFT - Just another web fuzzing tool'
+        description='JAWFT - Just another web fuzzing tool v{version}'.format(
+                version=__version__
+        )
     )
 
     parser.add_argument('-w', '--wordlist',
